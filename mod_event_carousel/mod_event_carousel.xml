@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" client="site" method="upgrade">
+    <name>Event Carousel PSU</name>
+    <version>1.0.3</version>
+    <author>me</author>
+    <creationDate>today</creationDate>
+    <description>
+        Event Carousel 
+        ตาราง Fields ที่จำเป็นมี ("sources-funding", "scholarship-name", "open-day", "close-date", "scholarships-image", "scholarships-url") 
+        พอกำหนดฟิลด์เสร็จก็สร้าง Field Groups 
+
+        ข้อเเนะนำถ้าเกิด ไม่มีตำเเหน่งรูปให้ ใส่ไฟล์ชื่อว่า images/default.jpg มันจะได้ไม่พัง
+    </description>
+    <namespace path="src">My\Module\EventCarousel</namespace>
+    <files>
+        <folder module="mod_event_carousel">services</folder>
+        <folder>src</folder>
+        <folder>tmpl</folder>
+    </files>
+    <media destination="mod_event_carousel" folder="media">
+        <filename>joomla.asset.json</filename>
+        <folder>js</folder>
+        <folder>css</folder>
+    </media>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                    name="titleCarousel" 
+                    type="text" 
+                    default="หัวข้อ" 
+                    label="หัวข้อ" 
+                    description="หัวข้อ" 
+                    size="10"
+                />
+                <field
+                    name="fieldGroup" 
+                    type="text" 
+                    default="Field Group" 
+                    label="ชื่อกลุ่มฟิลด์ (Field Groups)" 
+                    description="กลุ่มฟิลด์ที่ต้องการให้มันเเสดง ใน module นี้" 
+                    size="10"
+                />
+                <field
+                    name="selectCategory" 
+                    type="category" 
+                    extension="com_content" 
+                    label="เลือกหมวดหมู่ (category)" 
+                    description="เลือกหมวดหมู่ (category) ที่ต้องการให้เเสดง"
+                />
+            </fieldset>
+        </fields>
+    </config>
+</extension>
