@@ -19,7 +19,7 @@
 
 ## เลือก Group Filed 
 
-![This is an alt text.](/image/Screenshot 2026-02-22 162144.png "This is a sample image.")
+*ตอนที่สร้าง filed ให้เลือก group ให้มันด้วย*
 
 ## กำหนด Articles
 
